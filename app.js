@@ -29,7 +29,7 @@ book.info = function(){
     return `${this.title} ${this.author} is ${this.pages} pages and i have read it ${this.readCount} time(s).`
 } 
 
-console.log(book.info()) ;
+//console.log(book.info()) ;
 
 
 let sentence = "The quick brown fox jumps over the lazy dog";
@@ -52,19 +52,23 @@ newArray.push(newValue) ;
 
 //console.log(newArray.join(" ")) ;
 
-let result = []; 
+ // Exercise 2 Section
+ console.log("EXERCISE 5:\n==========\n");
 
 let csvData = "name,age\nFrodo,50\nSam,38\nMerry,36\nPippin,26";
-
+let result = []; 
 let newString = csvData.split("\n") ;
+console.log(newString)
+let headers = newString[0].split(",") ;
+console.log(headers)
 
 for ( let i = 1 ; i < newString.length ; i++ ){
-    const value = newString[i].split(",") ;
-    let obj = [];
+    const rows = newString[i].split(",") ;
+    let obj = {};
     obj.name = value[0] ;
     obj.age = value[1] ;
-    result.push(obj)
+    result.push [obj] ;
 } ;
 
-console.log(result)
+console.log(rows)
 
